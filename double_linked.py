@@ -43,6 +43,7 @@ def detete_element(head, index):
         next_node.previous = previous_node
     return head if previous_node else next_node
 
+
 def print_list(head):
     node = head
     node_list = []
@@ -50,6 +51,7 @@ def print_list(head):
         node_list.append(node.value)
         node = node.next
     print(node_list)
+
 
 head = Node(2)
 
@@ -60,7 +62,7 @@ head = insert_element(head, 12)
 head = insert_element(head, 19)
 head = insert_element(head, 23, 0)
 
-#head = detete_element(head, 3)
+# head = detete_element(head, 3)
 
 print_list(head)
 
@@ -100,6 +102,7 @@ class Queue():
             node_list.append(node.value)
             node = node.next
         print(node_list)
+
 
 queue_1 = Queue()
 queue_1.push(12)
