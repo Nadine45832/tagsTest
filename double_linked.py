@@ -4,6 +4,7 @@ class Node:
         self.next = next
         self.previous = previous
 
+
 def get_node_by_index(head, index):
     node = head
     while index:
@@ -11,11 +12,13 @@ def get_node_by_index(head, index):
         index -= 1
     return node
 
+
 def return_last_element(head):
     node = head
     while node.next:
         node = node.next
     return node
+
 
 def insert_element(head, value, index=None):
     new_node = Node(value)
@@ -23,7 +26,7 @@ def insert_element(head, value, index=None):
         next_node = head
         head.previous = new_node
         new_node.next = head
-        return new_node        
+        return new_node
     previous_node = get_node_by_index(head, index - 1) if index else return_last_element(head)
     next_node = previous_node.next
     previous_node.next = new_node
@@ -32,6 +35,7 @@ def insert_element(head, value, index=None):
         next_node.previous = new_node
         new_node.next = next_node
     return head
+
 
 def detete_element(head, index):
     node = get_node_by_index(head, index)
